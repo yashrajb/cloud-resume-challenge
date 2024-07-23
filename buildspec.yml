@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      # Install all dependencies (including dependencies for running tests)
+      - cd backend/getVisitor
+      - npm install
+      - cd ..
+      - cd putVisitor
+      - npm install
+  build:
+    commands:
+      - samlocal build
